@@ -5,14 +5,6 @@
 @section('content')
 <h1>Esta é a página home</h1>
 
-<div>
-    <span>
-        <a href="/contatos">Contatos</a>
-    </span>
-    <span>
-        <a href="/produtos">Produtos</a>
-    </span>
-</div>
 
 <img src="/images/banner.jpeg" alt="banner">
 @if (10 > 15)

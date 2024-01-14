@@ -18,18 +18,20 @@ Route::get('/', function () {
     $nome = "Bruno";
     $idade = 24;
     $profissao = "Programadador";
-    $arr = [10,20,30,40,50];
+    $arr = [10, 20, 30, 40, 50];
 
     $nomes  = ["João", "Maria", "José"];
 
-    return view('welcome',
-    [
-        'nome' => $nome,
-        'idade' => $idade,
-        'profissao' => $profissao,
-        'arr' => $arr,
-        'nomes' => $nomes
-    ]);
+    return view(
+        'welcome',
+        [
+            'nome' => $nome,
+            'idade' => $idade,
+            'profissao' => $profissao,
+            'arr' => $arr,
+            'nomes' => $nomes
+        ]
+    );
 });
 
 Route::get('/contatos', function () {
@@ -37,6 +39,12 @@ Route::get('/contatos', function () {
 });
 
 Route::get('/produtos', function () {
-    return view('products');
+
+    $busca = request('search');
+
+    return view('products', ['busca' => $busca]);
 });
 
+Route::get('/produtos_testes/{id?}', function ($id = null) {
+    return view('product', ['id' => $id]);
+});
