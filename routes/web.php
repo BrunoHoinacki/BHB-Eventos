@@ -18,8 +18,18 @@ Route::get('/', function () {
     $nome = "Bruno";
     $idade = 24;
     $profissao = "Programadador";
+    $arr = [10,20,30,40,50];
 
-    return view('welcome', ['nome' => $nome, 'idade' => $idade, 'profissao' => $profissao]);
+    $nomes  = ["João", "Maria", "José"];
+
+    return view('welcome',
+    [
+        'nome' => $nome,
+        'idade' => $idade,
+        'profissao' => $profissao,
+        'arr' => $arr,
+        'nomes' => $nomes
+    ]);
 });
 
 Route::get('/contatos', function () {
