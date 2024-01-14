@@ -1,12 +1,9 @@
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.main')
 
-    <title>Produtos</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/scripts.js"></script>
-</head>
+@section('title', 'HDC Events')
+
+@section('content')
 <h1>Esta é a página de produtos!</h1>
-<a href="/">voltar para home</a>
-<a href="/contatos">voltar para contatos</a>
-
+<a href="/">Home</a>
+<a href="/contatos">Contatos</a>
+@endsection
