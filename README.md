@@ -221,7 +221,7 @@ O commit semântico possui os elementos estruturais abaixo (tipos), que informam
     <tr>
       <td>Removendo um arquivo</td>
       <td>🔥 <code>:fire:</code></td>
-      <td></td>
+      <td><code>remove</code></td>
     </tr>
     <tr>
       <td>Removendo uma dependência</td>
