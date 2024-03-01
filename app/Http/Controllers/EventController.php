@@ -2,36 +2,37 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Models\Event;
-
 use App\Models\User;
+use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
-    public function index(){
+    public function index()
+    {
 
         $search = request('search');
 
-        if($search){
+        if ($search) {
 
             $events = Event::where([
-                ['title', 'like', '%'.$search.'%']
+                ['title', 'like', '%'.$search.'%'],
             ])->get();
 
-        } else{
+        } else {
             $events = Event::all();
         }
 
-        return view('welcome',['events' => $events, 'search' => $search]);
+        return view('welcome', ['events' => $events, 'search' => $search]);
     }
 
-    public function create(){
+    public function create()
+    {
         return view('events.create');
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
 
         $event = new Event;
 
@@ -49,7 +50,7 @@ class EventController extends Controller
 
             $extension = $requestImage->extension();
 
-            $imageName = md5($requestImage->getClientOriginalName() . time()) . "." . $extension;
+            $imageName = md5($requestImage->getClientOriginalName().time()).'.'.$extension;
 
             $requestImage->move(public_path('images/events'), $imageName);
 
@@ -63,12 +64,14 @@ class EventController extends Controller
 
         return redirect('/')->with('msg', 'Evento criado com sucesso!');
     }
-    public function show($id){
+
+    public function show($id)
+    {
 
         $event = Event::findOrFail($id);
 
         $eventOwner = User::where('id', $event->user_id)->first()->toArray();
 
-        return view('events.show',['event' => $event, 'eventOwner' => $eventOwner]);
+        return view('events.show', ['event' => $event, 'eventOwner' => $eventOwner]);
     }
 }

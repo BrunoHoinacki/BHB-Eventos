@@ -23,8 +23,8 @@ return new class extends Migration
     {
         Schema::table('events', function (Blueprint $table) {
             $table->foreignId('user_id')
-            ->constrained()
-            ->onDelete('cascade');
+                ->constrained()
+                ->onDelete('cascade');
         });
     }
 };
