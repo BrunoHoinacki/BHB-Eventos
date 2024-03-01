@@ -220,9 +220,9 @@
     display: inline-block;
   }
 
-.dashboard-events-container td {
-  vertical-align: middle;
-}
+  .dashboard-events-container td {
+    vertical-align: middle;
+  }
 
   /* footer */
   footer {
