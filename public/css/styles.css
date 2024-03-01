@@ -216,6 +216,14 @@
     width: 25%;
   }
 
+  .dashboard-events-container form{
+    display: inline-block;
+  }
+
+.dashboard-events-container td {
+  vertical-align: middle;
+}
+
   /* footer */
   footer {
     text-align: center;
