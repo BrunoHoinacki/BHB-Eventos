@@ -224,6 +224,12 @@
     vertical-align: middle;
   }
 
+  /* Edit Page */
+  .img-preview{
+    width: 150px;
+    margin-top: 20px;
+  }
+
   /* footer */
   footer {
     text-align: center;
