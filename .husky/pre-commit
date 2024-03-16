@@ -1,1 +1,13 @@
+#!/bin/bash
+
+# Execute o Pint
 ./vendor/bin/pint
+
+# Verifique se houve erros
+if [ $? -ne 0 ]; then
+    echo "Pint encontrou erros. Commit cancelado."
+    exit 1  # Saia com um status de erro para cancelar o commit
+fi
+
+# Se não houver erros, permita o commit
+exit 0
