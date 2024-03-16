@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Models\Event;
-
+use App\Models\{Event, User};
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -122,12 +120,13 @@ class EventController extends Controller
 
         return redirect('/dashboard')->with('msg', 'Evento editado com sucesso!');
     }
-    
-    public function joinEvent($id){
+
+    public function joinEvent($id)
+    {
         $user = auth()->user();
-        
+
         $user->eventsAsParticipant()->attach($id);
-        
+
         $event = Event::findOrFail($id);
 
         return redirect('/dashboard')->with('msg', 'Sua inscricão no evento ' . $event->title . ' foi realizada com sucesso!');
