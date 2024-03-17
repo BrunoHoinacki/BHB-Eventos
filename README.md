@@ -23,7 +23,7 @@ Para instalar o HDC Events, siga estas etapas:
 
 Clone o repositorio:
 ```bash
-git fork https://github.com/BrunoHoinacki/hdcevents.git
+git clone https://github.com/BrunoHoinacki/hdcevents.git
 ```
 
 gerando chave
