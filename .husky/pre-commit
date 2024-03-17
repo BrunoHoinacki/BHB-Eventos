@@ -1,12 +1,30 @@
 #!/bin/bash
 
+# Cabeçalho
+echo ""
+echo "-----------------------------------------------------------------------------"
+echo "  Iniciando pré-commits.                                                     "
+echo "-----------------------------------------------------------------------------"
+echo ""
+
 # Execute o Pint
 ./vendor/bin/pint
 
 # Verifique se houve erros
 if [ $? -ne 0 ]; then
-    echo "Pint encontrou erros. Commit cancelado."
-    exit 1  # Saia com um status de erro para cancelar o commit
+    echo ""
+    echo "-----------------------------------------------------------------------------"
+    echo "  Pint encontrou erros! Commit cancelado.                                    "
+    echo "-----------------------------------------------------------------------------"
+    echo ""
+    exit 1 # Saia com um status de erro para cancelar o commit
+else
+    # Mensagem de sucesso destacada
+    echo ""
+    echo "-----------------------------------------------------------------------------"
+    echo "  Nenhum erro encontrado pelo Pint. Commit permitido.                        "
+    echo "-----------------------------------------------------------------------------"
+    echo ""
 fi
 
 # Se não houver erros, permita o commit
