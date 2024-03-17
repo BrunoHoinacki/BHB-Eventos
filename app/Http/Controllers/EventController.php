@@ -67,7 +67,7 @@ class EventController extends Controller
 
         $user = auth()->user();
 
-        $hasUserJoined =false;
+        $hasUserJoined = false;
 
         if ($user) {
             $userEvents = $user->eventsAsParticipant->toArray();
