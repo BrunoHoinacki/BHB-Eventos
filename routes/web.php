@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
-
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,11 +42,23 @@ Route::get('/contatos', function () {
     return view('contact');
 });
 
-Route::get('/auth/redirect', function () {
-    return Socialite::driver('github')->redirect();
+Route::get('/auth/{provider}/redirect', function (string $provider) {
+    return Socialite::driver($provider)->redirect();
 });
 
-Route::get('/auth/github/callback', function () {
-    $user = Socialite::driver('github')->user();
-    var_dump($user);
+Route::get('/auth/{provider}/callback', function (string $provider) {
+    $providerUser = Socialite::driver($provider)->user();
+
+    $user = User::updateOrCreate([
+        'name' => $providerUser->name,
+    ], [
+        'provider_id' => $providerUser->getId(),
+        'email' => $providerUser->getEmail(),
+        'provider_avatar' => $providerUser->getAvatar(),
+        'provider_name' => $provider,
+    ]);
+
+    Auth::login($user);
+
+    return redirect('/dashboard');
 });
