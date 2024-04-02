@@ -1,20 +1,8 @@
 <?php
 
 use App\Http\Controllers\EventController;
-use Illuminate\Support\Facades\Route;
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
+use Illuminate\Support\Facades\{Auth, Route};
 use Laravel\Socialite\Facades\Socialite;
 
 // Home
@@ -52,10 +40,10 @@ Route::get('/auth/{provider}/callback', function (string $provider) {
     $user = User::updateOrCreate([
         'name' => $providerUser->name,
     ], [
-        'provider_id' => $providerUser->getId(),
-        'email' => $providerUser->getEmail(),
+        'provider_id'     => $providerUser->getId(),
+        'email'           => $providerUser->getEmail(),
         'provider_avatar' => $providerUser->getAvatar(),
-        'provider_name' => $provider,
+        'provider_name'   => $provider,
     ]);
 
     Auth::login($user);
