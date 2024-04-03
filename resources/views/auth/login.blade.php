@@ -51,7 +51,7 @@
                     <div class="absolute inset-0 flex items-center">
                         <div class="w-full border-t border-gray-300"></div>
                     </div>
-                    <div class="relative bg-white px-4 text-lg text-gray-500 dark:bg-gray-800">
+                    <div class="relative bg-white px-4 text-lg text-gray-500">
                         OR
                     </div>
                 </div>
@@ -59,12 +59,12 @@
             <div class="flex justify-center gap-4 my-6">
                 <a href="/auth/github/redirect"
                     class="inline-flex items-center px-4 py-2 text-center text-white bg-black rounded hover:bg-gray-700">
-                    <i class="fab fa-github fa-lg mr-2"></i> 
+                    <i class="fab fa-github fa-lg mr-2"></i>
                     Login with Github
                 </a>
                 <a href="/auth/google/redirect"
                     class="inline-flex items-center px-4 py-2 text-center text-white bg-blue-500 rounded hover:bg-blue-700">
-                    <i class="fab fa-google fa-lg mr-2"></i> 
+                    <i class="fab fa-google fa-lg mr-2"></i>
                     Login with Google
                 </a>
             </div>
