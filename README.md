@@ -1,5 +1,26 @@
-# HDC Events
-Consiste em uma aplicação web com CRUD para criação de ventos e usúarios.
+# BHB Eventos
+
+BHB Eventos é uma aplicação web completa desenvolvida com Laravel, oferecendo funcionalidades de CRUD para criar eventos e gerenciar usuários.
+
+## Funcionalidades Principais
+- Explorar eventos de outros usuários
+- Buscar eventos por palavras-chave
+- Criar, participar e editar eventos
+- Login via redes sociais
+- Recuperação de senha
+- Dashboard de eventos
+
+## Tecnologias Utilizadas
+- **Laravel Blade**: Engine de template para construção de interfaces de usuário.
+- **Bootstrap**: Framework CSS para design responsivo e atraente.
+- **Pint e Husky**: Utilizados para formatação de código e validação consistente antes de cada commit.
+- **NPM e Composer**: Gerenciadores de pacotes para instalação e gerenciamento de dependências no front-end e back-end.
+- **MySQL**: Banco de dados utilizado para armazenamento de dados.
+- **Laravel Socialite**: Biblioteca para autenticação via redes sociais.
+- **Laravel Debugbar**: Ferramenta para desenvolvedores Laravel, fornecendo insights durante o desenvolvimento.
+- **Larastan**: Ferramenta de análise estática para detecção de erros em tempo de compilação.
+
+Este é apenas o protótipo inicial do projeto, fique à vontade para explorar, clonar ou enviar sugestões de melhorias através de PRs no GitHub.
 
 ![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
@@ -19,11 +40,11 @@ Consiste em uma aplicação web com CRUD para criação de ventos e usúarios.
 
 - Mysql com a versão 8.2
 
-Para instalar o HDC Events, siga estas etapas:
+Para instalar o BHB Eventos, siga estas etapas:
 
 Clone o repositorio:
 ```bash
-git clone https://github.com/BrunoHoinacki/hdcevents.git
+git clone https://github.com/BrunoHoinacki/bhbeventos.git
 ```
 
 gerando chave
