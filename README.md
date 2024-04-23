@@ -40,11 +40,11 @@ Este é apenas o protótipo inicial do projeto, fique à vontade para explorar, 
 
 - Mysql com a versão 8.2
 
-Para instalar o HDC Events, siga estas etapas:
+Para instalar o BHB Eventos, siga estas etapas:
 
 Clone o repositorio:
 ```bash
-git clone https://github.com/BrunoHoinacki/hdcevents.git
+git clone https://github.com/BrunoHoinacki/bhbeventos.git
 ```
 
 gerando chave
